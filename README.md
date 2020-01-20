@@ -1,4 +1,4 @@
-# DSA-Asgn-2
+# DSA-Assignment-2
 Solution for DSA Assignment-2 in C, BPHC.
 
 Try the problem before reading someone else's code.
