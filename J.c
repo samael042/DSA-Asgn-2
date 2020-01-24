@@ -13,7 +13,8 @@ int main()
 		if(been)
 			x = x^i;
 	}
-	x ^= n;
+	if(n > 1)
+		x ^= n;
 	printf("%lld", x);
  	return 0;
 }
