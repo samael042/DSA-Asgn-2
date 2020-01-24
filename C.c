@@ -2,8 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 
-#define N 10005
-char a[N];
+char a[100];
 //notice that 3rd characters of the given strings are always unique
 typedef struct node
 {
