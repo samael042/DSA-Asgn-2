@@ -18,13 +18,11 @@ void add(int d)
  	node* temp = (node*)malloc(sizeof(node));
  	temp->data = d;
  	temp->next = NULL;
- 	if(head == NULL)
- 	{
+ 	if(head == NULL){
  	 	head = temp;
  	 	tail = temp;
  	}
- 	else
- 	{
+ 	else{
  	 	tail->next = temp;
  	 	tail = temp;
  	}
@@ -93,8 +91,7 @@ void reverse()
 		return;
 	node* cur = head;
 	node *prev = NULL, *next = NULL;
-	while(cur != NULL)
-	{
+	while(cur != NULL){
 		next = cur->next;
 	 	cur->next = prev;
 	 	prev = cur;
@@ -128,29 +125,23 @@ int main()
 	scanf("%d", &q);
 	for(int x = 0; x < q; x++){
 	 	scanf("%s", a);
-	 	if(a[2] == 'd')
-	 	{
+	 	if(a[2] == 'd'){
 	 		scanf("%d", &i);
 			add(i);	 	 	
 		}
-		else if(a[2] == 's')
-		{
+		else if(a[2] == 's'){
 			scanf("%d %d", &i, &j);
 			head = insert(i, j); 	
 		}
-		else if(a[2] == 'm')
-		{
+		else if(a[2] == 'm'){
 		 	scanf("%d", &i);
 		 	lol(i);		
 		}
 		else if(a[2] == 'v')
-		{
 		 	reverse();
-		}
-		else if(a[2] == 't')
-		{
+		else if(a[2] == 't'){
 			scanf("%d", &i);
-		    fetch(i);
+		    	fetch(i);
 		}
 		print(head);
 		printf("\n");     
