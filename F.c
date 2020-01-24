@@ -64,40 +64,26 @@ int main()
 	}
 	node *h1 = l1.head;
 	node *h2 = l2.head;
-	while(h1 != NULL || h2 != NULL)
+	while(h1 != NULL && h2 != NULL)
 	{
 		int val;
-	  	if(h1 != NULL&& h2 != NULL && (h1->data <= h2->data))
-		{
+	  	if(h1->data <= h2->data){
 			val = h1->data;
 			h1 = h1->next;
 		}	
-	  	else if(h1 != NULL&& h2 != NULL && h1->data > h2->data)
-	  	{
+	  	else{
 	  	    val = h2->data;
 	  	    h2 = h2->next;
 	  	}
-	  	else if(h2 != NULL && h1 != NULL &&h1->data <= h2->data)
-	  	{
-	  	    val = h1->data;
-	  	    h1 = h1->next;
-	  	}
-	  	else if(h2 != NULL && h1 != NULL &&h1->data > h2->data)
-	  	{
-	  		val = h2->data;
-	  		h2 = h2->next;
-	  	}
-	  	else if(h1 == NULL)
-	  	{
-	  		val = h2->data;
-	  		h2 = h2->next;
-	  	}
-	  	else
-	  	{
-	  	 	val = h1->data;
-	  	 	h1 = h1->next;
-	  	}
 	  	insert(&l3, val);
+	}
+	while(h1 != NULL){
+		insert(&l3, h1->data);	
+		h1 = h1->next;
+	}
+	while(h2 != NULL){
+		insert(&l3, h2->data);
+		h2 = h2->next;
 	}
 	print(l3.head);
  	return 0;
